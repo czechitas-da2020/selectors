@@ -2,16 +2,9 @@
 describe('03 Elements', () => {
     //rozdel tenhle test-case do samostatnych test-casu. 
     // co testcase, to assertion (expect)
-    before(()=>{
-        browser.url('https://automation.cervik.repl.co/selectors.html');
-    })
-
-    beforeEach(()=>{
-        console.log('AKTUALNI CAS: ' + new Date())
-    })
-
 
     it('test mimo pohadku', ()=>{
+        browser.url('https://automation.cervik.repl.co/selectors.html');
         let giveLikeButton = browser.$('#like-button')      // najdi tlacitko "Dej like!" na konci pohadky
         let likeCounter = browser.$('#lvlAwesome')          // najdi pocitadlo pod pohadkou
         
@@ -27,21 +20,26 @@ describe('03 Elements', () => {
     })
 
     describe('fairytale', ()=>{
+        
         it('test1', () => {
+            browser.url('https://automation.cervik.repl.co/selectors.html');
             // jdi na adresu
             let headerOfStory = browser.$('#pohadka h2')            // najdi nadpis pohadky O Budulinkovi
             expect(headerOfStory).toHaveText('O Budulínkovi')       // overi se, ze element v promenne headerOfStory ma dany text
         });
     
         it('test2', ()=>{
+            browser.url('https://automation.cervik.repl.co/selectors.html');
             let paragraphsOfStory = browser.$$('#pohadka p')        // najdi vsechny paragraphs pohadky O Budulinkovi
             expect(paragraphsOfStory).toBeElementsArrayOfSize(16)   // overi, ze pocet elementu v poli se rovna 16
         })
         it('test3', ()=>{
+            browser.url('https://automation.cervik.repl.co/selectors.html');
             let foxsInStory = browser.$('p*=lištičky')              // najdi paragraph, kde se vyskytuje slovo "lištičky"
             expect(foxsInStory).toHaveTextContaining('lištičky')    // overi, ze v danem elementu jsou opravdu lištičky
         })
         it('test4', ()=>{
+            browser.url('https://automation.cervik.repl.co/selectors.html');
             let imageOfStory = browser.$('#pohadka img')        // najdi ilustraci v pohadce o budulinkovi
             expect(imageOfStory).toHaveAttribute('src', 'https://automation.cervik.repl.co/images/budulinek.jpg')
         })
