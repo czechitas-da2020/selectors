@@ -13,10 +13,10 @@ Základní nastavení WebdriverIO s podporu autocomplete do VSCode. Obsahuje jed
 ### Instalace 
 1. Vytvoř si složku, kde chceš mít všechny materiály - doporučuji něco ve stylu `Dokumenty/czechitas/automatizace`
 2. V terminálu jdi do vytvořené složky - pomocí příkazu `cd <dana slozka>`
-2. Stáhni si repozitář do svého počítače pomocí `git clone git@github.com:czechitas-da2020/01_automation.git`
+2. Stáhni si repozitář do svého počítače pomocí `git clone git@github.com:czechitas-da2020/03_mocha.git`
 3. V daném adresáři pusť `npm install` 
     * Tenhle příkaz Ti nainstaluje všechny potřebné balíčky, které pak budeme používat. 
-3. Otevři si VSCode a otevři v něm danou složku - `Dokumenty/czechitas/automatizace/01_automation`
+3. Otevři si VSCode a otevři v něm danou složku - `Dokumenty/czechitas/automatizace/03_mocha`
 
 ### Spuštění
 1. `npm test -- --spec {nazev ci cast nazvu souboru}`
