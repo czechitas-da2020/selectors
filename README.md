@@ -1,7 +1,7 @@
 # Selenium + WebdriverIO
-## 1. lekce 
+## 3. lekce 
 
-Základní nastavení WebdriverIO s podporu autocomplete do VSCode. Obsahuje jeden "test" v `test/spects/01_uvod.e2e.js`
+Zadání a ukázky pro lekci 3
 
 ### Požadavky
 * nainstalovaný git
