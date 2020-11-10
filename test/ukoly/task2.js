@@ -1,7 +1,15 @@
+/*
+ZADANI:
+    Odstraň duplicity 
+    Přesuň browser.url() do before()
+    Vypiš před každým testcasem(it()) aktuální cas - new Date()
+    Zkus si pustit poslední test-case použitím it.only
+    Zkus ignorovat test-casy použitím xit, it.skip
+
+*/
+
 
 describe('03 Elements', () => {
-    //rozdel tenhle test-case do samostatnych test-casu. 
-    // co testcase, to assertion (expect)
 
     it('test mimo pohadku', ()=>{
         browser.url('https://automation.cervik.repl.co/selectors.html');
