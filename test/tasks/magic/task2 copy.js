@@ -1,21 +1,41 @@
-// ZADANI: 
-// Rozděl jeden test-case mezi více
-// 1 test-case = kroky + 1 expect
-// Pojmenuj vhodně testcasy
+/**
+ * UKOL: Dopln chybejici selectory:
+ */
 
 
-describe('03 Elements', () => {
-    it('should pass correctly', () => {
+describe('Selectory - pohadka', () => {
+
+    before(() => {
         // jdi na adresu
         browser.url('https://automation.cervik.repl.co/selectors.html');
+    })
+
+    it('should pass correctly', () => {
 
 
         let headerOfStory = browser.$('#pohadka h2')       // najdi nadpis pohadky O Budulinkovi
+        // Napoveda: h-neco element
+        
         let paragraphsOfStory = browser.$$('#pohadka p')  // najdi vsechny paragraphs pohadky O Budulinkovi
+        // Napoveda: Paragraphu (elementu <p>) je na strance vice, budeme muset zanorit (pouzit vice lokatoru)
+        // prvne najdeme hlavni element a pak vsechny elementy 
+
         let foxsInStory = browser.$('p*=lištičky')         // najdi paragraph, kde se vyskytuje slovo "lištičky"
+        // Napoveda: Paragraph je stejny jako predchozi, pro vysky slova listicki pouzijem partial vyhledavani
+
+
         let imageOfStory = browser.$('#pohadka img')        // najdi ilustraci v pohadce o budulinkovi
+        // Napoveda: hledame obrazek - vzpomen si jaky tag ma element pro obrazek
+        // obrazku je na strance opet vice budeme muset byt vice specificti
+
+
         let giveLikeButton = browser.$('#like-button')      // najdi tlacitko "Dej like!" na konci pohadky
+
+
         let likeCounter = browser.$('#lvlAwesome')         // najdi pocitadlo pod pohadkou
+        // Napoveda: jedna se o to cislo 0 dole na strance
+
+        // ZBYTEK MUZES IGNOROVAT -- JEDNA SE O KONTROLU //
 
         expect(headerOfStory).toHaveText('O Budulínkovi')       // overi se, ze element v promenne headerOfStory ma dany text
         expect(paragraphsOfStory).toBeElementsArrayOfSize(16)   // overi, ze pocet elementu v poli se rovna 16
